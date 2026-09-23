@@ -21,18 +21,18 @@ def log_status(level, message):
         f.write(log_msg + "\n")
 
 def scrape_channels():
-    # স্ট্যাটাস ফাইল রিসেট করা (তারিখ ও সময় ছাড়া সুন্দর রঙিন ডট সহ)
+    # স্ট্যাটাস ফাইল রিসেট করা
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Scraper Status Log ---\n\n")
+        f.write("--- PlusBox TV Auto-Capture Log ---\n\n")
 
-    log_status("info", "স্ক্রিপ্ট সফলভাবে শুরু হয়েছে...")
+    log_status("info", "স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Linux; Android 10; SM-G960F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
         page = context.new_page()
 
@@ -40,71 +40,67 @@ def scrape_channels():
             log_status("info", f"লিংক ভিজিট করা হচ্ছে: {URL}")
             page.goto(URL, timeout=60000)
             page.wait_for_load_state("networkidle")
-            
-            # স্লাইডার পুরোপুরি লোড হওয়ার জন্য সময় দেওয়া
             time.sleep(5)
 
-            log_status("info", "স্লাইডার থেকে চ্যানেল কার্ড, নাম এবং ডাটা সোর্স খোঁজা হচ্ছে...")
-
-            # HTML স্ট্রাকচার অনুযায়ী প্রতিটি চ্যানেলের <a> ট্যাগগুলো সিলেক্ট করা
+            # চ্যানেল কার্ডগুলো খুঁজে বের করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
-            
-            log_status("debug", f"মোট চ্যানেল ট্যাগ পাওয়া গেছে: {len(channel_links)} টি")
+            log_status("debug", f"মোট চ্যানেল পাওয়া গেছে: {len(channel_links)} টি")
 
-            for link in channel_links:
-                # ১. ডেটা সোর্স বা মাস্টার লিংক বের করা (data-source এট্রিবিউট থেকে)
-                source_url = link.get_attribute("data-source")
-                
-                # ২. চ্যানেলের নাম বের করা (href অথবা data-name থেকে)
-                href = link.get_attribute("href")
+            for index, link in enumerate(channel_links):
+                # ১. চ্যানেলের নাম বা টাইটেল সংগ্রহ
                 data_name = link.get_attribute("data-name")
-                
-                title = ""
-                if data_name:
-                    title = data_name
-                elif href and href.startswith("#"):
-                    title = href.replace("#", "").strip()
-                
-                if not title:
-                    title = "Unknown Channel"
+                href = link.get_attribute("href")
+                title = data_name if data_name else (href.replace("#", "").strip() if href else f"Channel {index+1}")
 
-                # ৩. লোগো বা ইমেজ লিংক বের করা
+                # ২. লোগো সংগ্রহ
                 img = link.query_selector("img")
                 logo_url = ""
                 if img:
                     src = img.get_attribute("src")
                     if src:
-                        if src.startswith("/"):
-                            logo_url = "https://plusbox.tv" + src
-                        elif not src.startswith("http"):
-                            logo_url = "https://plusbox.tv/" + src
-                        else:
-                            logo_url = src
+                        logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                # যদি সঠিক সোর্স লিংক এবং লোগো থাকে, তবে লিস্টে যোগ করা
-                if source_url and logo_url:
-                    # ডুপ্লিকেট চেক
-                    if not any(ch['url'] == source_url for ch in extracted_channels):
-                        extracted_channels.append({
-                            "title": title,
-                            "logo": logo_url,
-                            "url": source_url
-                        })
+                # ৩. নেটওয়ার্ক রিকোয়েস্ট ট্র্যাক করার জন্য কন্টেইনার
+                captured_m3u8 = []
 
-            log_status("info", f"সফলভাবে প্রসেস করা মোট চ্যানেল: {len(extracted_channels)} টি")
+                def handle_request(request):
+                    if ".m3u8" in request.url or "playlist" in request.url:
+                        if request.url not in captured_m3u8:
+                            captured_m3u8.append(request.url)
 
-            # প্লেলিস্ট ফাইল তৈরি করা (.m3u)
+                # রিকোয়েস্ট লিসেনার যুক্ত করা
+                page.on("request", handle_request)
+
+                try:
+                    # ৪. চ্যানেলে স্বয়ংক্রিয় ক্লিক করা যাতে ভিডিও ও m3u8 লিংক লোড হয়
+                    link.click()
+                    # লিংক লোড হওয়ার জন্য ২ সেকেন্ড অপেক্ষা
+                    time.sleep(2.5)
+                except Exception as click_err:
+                    log_status("warning", f"{title} এ ক্লিক করার সময় সমস্যা হয়েছে: {str(click_err)}")
+
+                # লিসেনার রিমুভ করা পরবর্তী চ্যানেলের জন্য
+                page.remove_listener("request", handle_request)
+
+                # আসল m3u8 লিংক অ্যাসাইন করা
+                stream_url = captured_m3u8[0] if captured_m3u8 else "https://plusbox.tv/"
+
+                if logo_url:
+                    extracted_channels.append({
+                        "title": title,
+                        "logo": logo_url,
+                        "url": stream_url
+                    })
+                    log_status("success", f"[{title}] সফলভাবে ক্যাপচার হয়েছে!")
+
+            # ৫. .m3u প্লেলিস্ট ফাইল তৈরি করা
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
-                if len(extracted_channels) > 0:
-                    for ch in extracted_channels:
-                        f.write(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" ,{ch["title"]}\n')
-                        f.write(f'{ch["url"]}\n')
-                    log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: {len(extracted_channels)}")
-                else:
-                    f.write('#EXTINF:-1, PlusBox TV No Channel Found\n')
-                    f.write('https://plusbox.tv/\n')
-                    log_status("warning", "কোনো চ্যানেল বা ডাটা সোর্স পাওয়া যায়নি।")
+                for ch in extracted_channels:
+                    f.write(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" ,{ch["title"]}\n')
+                    f.write(f'{ch["url"]}\n')
+
+            log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: {len(extracted_channels)}")
 
         except Exception as e:
             log_status("error", f"ত্রুটি ঘটেছে: {str(e)}")
