@@ -21,9 +21,8 @@ def log_status(level, message):
         f.write(log_msg + "\n")
 
 def scrape_channels():
-    # স্ট্যাটাস ফাইল রিসেট করা
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Auto-Capture Log ---\n\n")
+        f.write("--- PlusBox TV Deep-Capture Log ---\n\n")
 
     log_status("info", "স্ক্রিপ্ট শুরু হয়েছে...")
 
@@ -42,17 +41,14 @@ def scrape_channels():
             page.wait_for_load_state("networkidle")
             time.sleep(5)
 
-            # চ্যানেল কার্ডগুলো খুঁজে বের করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
             log_status("debug", f"মোট চ্যানেল পাওয়া গেছে: {len(channel_links)} টি")
 
             for index, link in enumerate(channel_links):
-                # ১. চ্যানেলের নাম বা টাইটেল সংগ্রহ
                 data_name = link.get_attribute("data-name")
                 href = link.get_attribute("href")
                 title = data_name if data_name else (href.replace("#", "").strip() if href else f"Channel {index+1}")
 
-                # ২. লোগো সংগ্রহ
                 img = link.query_selector("img")
                 logo_url = ""
                 if img:
@@ -60,30 +56,36 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                # ৩. নেটওয়ার্ক রিকোয়েস্ট ট্র্যাক করার জন্য কন্টেইনার
-                captured_m3u8 = []
+                captured_streams = []
 
+                # আরও প্রশস্ত পরিসরে রিকোয়েস্ট ফিল্টার করা (m3u8, mpd, stream, playlist ইত্যাদি)
                 def handle_request(request):
-                    if ".m3u8" in request.url or "playlist" in request.url:
-                        if request.url not in captured_m3u8:
-                            captured_m3u8.append(request.url)
+                    req_url = request.url
+                    if any(ext in req_url for ext in [".m3u8", ".mpd", "playlist", "manifest", "chunk.list"]):
+                        if "plusbox.tv" in req_url or "backend" in req_url:
+                            if req_url not in captured_streams:
+                                captured_streams.append(req_url)
 
-                # রিকোয়েস্ট লিসেনার যুক্ত করা
                 page.on("request", handle_request)
 
                 try:
-                    # ৪. চ্যানেলে স্বয়ংক্রিয় ক্লিক করা যাতে ভিডিও ও m3u8 লিংক লোড হয়
                     link.click()
-                    # লিংক লোড হওয়ার জন্য ২ সেকেন্ড অপেক্ষা
-                    time.sleep(2.5)
+                    # স্ট্রিম রিকোয়েস্ট লোড হওয়ার জন্য একটু বেশি সময় দেওয়া (৪ সেকেন্ড)
+                    time.sleep(4)
                 except Exception as click_err:
                     log_status("warning", f"{title} এ ক্লিক করার সময় সমস্যা হয়েছে: {str(click_err)}")
 
-                # লিসেনার রিমুভ করা পরবর্তী চ্যানেলের জন্য
                 page.remove_listener("request", handle_request)
 
-                # আসল m3u8 লিংক অ্যাসাইন করা
-                stream_url = captured_m3u8[0] if captured_m3u8 else "https://plusbox.tv/"
+                # যদি রিয়েল স্ট্রিম লিংক পাওয়া যায় সেটি বসবে, না পেলে ডেটা সোর্স বা ফলব্যাক লিংক বসবে
+                if captured_streams:
+                    stream_url = captured_streams[0]
+                    log_status("success", f"[{title}] রিয়েল স্ট্রিম লিংক পাওয়া গেছে!")
+                else:
+                    # যদি নেটওয়ার্কে না ধরে, তবে এলিমেন্টের নিজস্ব data-source ব্যাকআপ হিসেবে ব্যবহার করা
+                    source_attr = link.get_attribute("data-source")
+                    stream_url = source_attr if source_attr else "https://plusbox.tv/"
+                    log_status("warning", f"[{title}] স্ট্রিম লিংক না পাওয়ায় ব্যাকআপ সোর্স ব্যবহার করা হয়েছে।")
 
                 if logo_url:
                     extracted_channels.append({
@@ -91,9 +93,7 @@ def scrape_channels():
                         "logo": logo_url,
                         "url": stream_url
                     })
-                    log_status("success", f"[{title}] সফলভাবে ক্যাপচার হয়েছে!")
 
-            # ৫. .m3u প্লেলিস্ট ফাইল তৈরি করা
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
