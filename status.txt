@@ -1,114 +1,61 @@
---- PlusBox TV Direct Source Extraction Log ---
+--- PlusBox TV Lightning Fast Log ---
 
-🔵 [INFO] স্ক্রিপ্ট শুরু হয়েছে...
+🔵 [INFO] সুপার-ফাস্ট স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
+🔵 [INFO] টোকেন জেনারেট হওয়ার জন্য ১০ সেকেন্ড অপেক্ষা করা হচ্ছে...
 🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 54 টি
-🔵 [INFO] --- [1/54] প্রসেস করা হচ্ছে: BTVWorld ---
-🟢 [SUCCESS] [BTVWorld] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [2/54] প্রসেস করা হচ্ছে: BTV ---
-🟢 [SUCCESS] [BTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [3/54] প্রসেস করা হচ্ছে: ATNBangla ---
-🟢 [SUCCESS] [ATNBangla] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [4/54] প্রসেস করা হচ্ছে: ATNNews ---
-🟢 [SUCCESS] [ATNNews] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [5/54] প্রসেস করা হচ্ছে: BijoyTV ---
-🟢 [SUCCESS] [BijoyTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [6/54] প্রসেস করা হচ্ছে: AsianTV ---
-🟢 [SUCCESS] [AsianTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [7/54] প্রসেস করা হচ্ছে: BanglaVision ---
-🟢 [SUCCESS] [BanglaVision] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [8/54] প্রসেস করা হচ্ছে: Channel24 ---
-🟢 [SUCCESS] [Channel24] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [9/54] প্রসেস করা হচ্ছে: ChannelI ---
-🟢 [SUCCESS] [ChannelI] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [10/54] প্রসেস করা হচ্ছে: DBCNews ---
-🟢 [SUCCESS] [DBCNews] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [11/54] প্রসেস করা হচ্ছে: Channel9 ---
-🟢 [SUCCESS] [Channel9] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [12/54] প্রসেস করা হচ্ছে: DeeptoTV ---
-🟢 [SUCCESS] [DeeptoTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [13/54] প্রসেস করা হচ্ছে: DeshTV ---
-🟢 [SUCCESS] [DeshTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [14/54] প্রসেস করা হচ্ছে: EkattorTV ---
-🟢 [SUCCESS] [EkattorTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [15/54] প্রসেস করা হচ্ছে: EkusheyTv ---
-🟢 [SUCCESS] [EkusheyTv] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [16/54] প্রসেস করা হচ্ছে: TSportsHD ---
-🟢 [SUCCESS] [TSportsHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [17/54] প্রসেস করা হচ্ছে: IndependentTV ---
-🟢 [SUCCESS] [IndependentTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [18/54] প্রসেস করা হচ্ছে: GaziTVHD ---
-🟢 [SUCCESS] [GaziTVHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [19/54] প্রসেস করা হচ্ছে: JamunaTV ---
-🟢 [SUCCESS] [JamunaTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [20/54] প্রসেস করা হচ্ছে: Maasranga ---
-🟢 [SUCCESS] [Maasranga] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [21/54] প্রসেস করা হচ্ছে: MyTV ---
-🟢 [SUCCESS] [MyTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [22/54] প্রসেস করা হচ্ছে: StarNews ---
-🟢 [SUCCESS] [StarNews] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [23/54] প্রসেস করা হচ্ছে: News24 ---
-🟢 [SUCCESS] [News24] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [24/54] প্রসেস করা হচ্ছে: NTV ---
-🟢 [SUCCESS] [NTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [25/54] প্রসেস করা হচ্ছে: RTV ---
-🟢 [SUCCESS] [RTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [26/54] প্রসেস করা হচ্ছে: SomoyTv ---
-🟢 [SUCCESS] [SomoyTv] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [27/54] প্রসেস করা হচ্ছে: EkhonTV ---
-🟢 [SUCCESS] [EkhonTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [28/54] প্রসেস করা হচ্ছে: ColorsBangla ---
-🟢 [SUCCESS] [ColorsBangla] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [29/54] প্রসেস করা হচ্ছে: IndiaToday ---
-🟢 [SUCCESS] [IndiaToday] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [30/54] প্রসেস করা হচ্ছে: BloombergTV ---
-🟢 [SUCCESS] [BloombergTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [31/54] প্রসেস করা হচ্ছে: RussiaToday ---
-🟢 [SUCCESS] [RussiaToday] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [32/54] প্রসেস করা হচ্ছে: RedBullTV ---
-🟢 [SUCCESS] [RedBullTV] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [33/54] প্রসেস করা হচ্ছে: Aljazeera ---
-🟢 [SUCCESS] [Aljazeera] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [34/54] প্রসেস করা হচ্ছে: Enterr10 ---
-🟢 [SUCCESS] [Enterr10] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [35/54] প্রসেস করা হচ্ছে: DiscoveryHD ---
-🟢 [SUCCESS] [DiscoveryHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [36/54] প্রসেস করা হচ্ছে: AnimalPlanet ---
-🟢 [SUCCESS] [AnimalPlanet] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [37/54] প্রসেস করা হচ্ছে: PTVSports ---
-🟢 [SUCCESS] [PTVSports] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [38/54] প্রসেস করা হচ্ছে: SonyTVHD ---
-🟢 [SUCCESS] [SonyTVHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [39/54] প্রসেস করা হচ্ছে: SonyAath ---
-🟢 [SUCCESS] [SonyAath] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [40/54] প্রসেস করা হচ্ছে: SonyMaxHD ---
-🟢 [SUCCESS] [SonyMaxHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [41/54] প্রসেস করা হচ্ছে: SonyTen1HD ---
-🟢 [SUCCESS] [SonyTen1HD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [42/54] প্রসেস করা হচ্ছে: SonyTen2HD ---
-🟢 [SUCCESS] [SonyTen2HD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [43/54] প্রসেস করা হচ্ছে: SonyTen3HD ---
-🟢 [SUCCESS] [SonyTen3HD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [44/54] প্রসেস করা হচ্ছে: StarSports1HD ---
-🟢 [SUCCESS] [StarSports1HD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [45/54] প্রসেস করা হচ্ছে: StarSports2HD ---
-🟢 [SUCCESS] [StarSports2HD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [46/54] প্রসেস করা হচ্ছে: StarSportsSelect1 ---
-🟢 [SUCCESS] [StarSportsSelect1] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [47/54] প্রসেস করা হচ্ছে: StarSportsSelect2 ---
-🟢 [SUCCESS] [StarSportsSelect2] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [48/54] প্রসেস করা হচ্ছে: UNITE8Sports1 ---
-🟢 [SUCCESS] [UNITE8Sports1] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [49/54] প্রসেস করা হচ্ছে: EUROSPORT ---
-🟢 [SUCCESS] [EUROSPORT] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [50/54] প্রসেস করা হচ্ছে: BTSportsEspn ---
-🟢 [SUCCESS] [BTSportsEspn] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [51/54] প্রসেস করা হচ্ছে: StarJalshaHD ---
-🟢 [SUCCESS] [StarJalshaHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [52/54] প্রসেস করা হচ্ছে: StarGoldHD ---
-🟢 [SUCCESS] [StarGoldHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [53/54] প্রসেস করা হচ্ছে: ZeeBanglaHD ---
-🟢 [SUCCESS] [ZeeBanglaHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
-🔵 [INFO] --- [54/54] প্রসেস করা হচ্ছে: ZeeCinemaHD ---
-🟢 [SUCCESS] [ZeeCinemaHD] লিংক সফলভাবে সংগ্রহ করা হয়েছে!
+🟢 [SUCCESS] [BTVWorld] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [BTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ATNBangla] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ATNNews] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [BijoyTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [AsianTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [BanglaVision] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [Channel24] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ChannelI] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [DBCNews] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [Channel9] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [DeeptoTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [DeshTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [EkattorTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [EkusheyTv] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [TSportsHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [IndependentTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [GaziTVHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [JamunaTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [Maasranga] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [MyTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarNews] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [News24] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [NTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [RTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SomoyTv] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [EkhonTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ColorsBangla] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [IndiaToday] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [BloombergTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [RussiaToday] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [RedBullTV] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [Aljazeera] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [Enterr10] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [DiscoveryHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [AnimalPlanet] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [PTVSports] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyTVHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyAath] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyMaxHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyTen1HD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyTen2HD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [SonyTen3HD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarSports1HD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarSports2HD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarSportsSelect1] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarSportsSelect2] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [UNITE8Sports1] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [EUROSPORT] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [BTSportsEspn] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarJalshaHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [StarGoldHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ZeeBanglaHD] লিংক সফলভাবে যোগ করা হয়েছে!
+🟢 [SUCCESS] [ZeeCinemaHD] লিংক সফলভাবে যোগ করা হয়েছে!
 🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 54
