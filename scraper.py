@@ -21,9 +21,9 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Lightning Fast Log ---\n\n")
+        f.write("--- PlusBox TV Fast Token Capture Log ---\n\n")
 
-    log_status("info", "সুপার-ফাস্ট স্ক্রিপ্ট শুরু হয়েছে...")
+    log_status("info", "ফাস্ট টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
@@ -38,27 +38,12 @@ def scrape_channels():
         )
         page = context.new_page()
 
-        # নেটওয়ার্ক ইন্টারসেপ্ট করে রিয়েল-টাইম টোকেনযুক্ত মাস্টার লিংকগুলো একটি ডিকশনারিতে ধরে রাখা
-        captured_tokens = {}
-
-        def handle_request(request):
-            req_url = request.url
-            if "index.fmp4.m3u8" in req_url and "token=" in req_url:
-                for ch_name in ["GaziTVHD", "SomoyTv", "TSportsHD", "JamunaTV", "IndependentTV", "Channel24", "DBCNews", "EkattorTV", "RTV", "NTV", "ATNNews", "ChannelI", "DeeptoTV", "Maasranga", "DeshTV", "BTVWorld", "BTV", "ATNBangla", "BijoyTV", "AsianTV", "BanglaVision", "Channel9", "EkusheyTv", "MyTV", "StarNews", "News24", "EkhonTV", "ColorsBangla", "IndiaToday", "BloombergTV", "RussiaToday"]:
-                    if ch_name.lower() in req_url.lower():
-                        captured_tokens[ch_name] = req_url
-
-        page.on("request", handle_request)
-
         try:
             log_status("info", f"ওয়েবসাইট ভিজিট করা হচ্ছে: {URL}")
             page.goto(URL, timeout=60000)
-            
-            # সাইট পুরো লোড হওয়ার জন্য একটু সময় দেওয়া এবং ব্যাকএন্ড থেকে টোকেনগুলো নিজে থেকেই ফেচ হতে দেওয়া
-            log_status("info", "টোকেন জেনারেট হওয়ার জন্য ১০ সেকেন্ড অপেক্ষা করা হচ্ছে...")
-            time.sleep(10)
+            page.wait_for_load_state("networkidle")
+            time.sleep(3)
 
-            # চ্যানেল থাম্বনেইলগুলো থেকে সরাসরি নাম ও লোগো সংগ্রহ করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
             total_channels = len(channel_links)
             log_status("info", f"মোট চ্যানেল পাওয়া গেছে: {total_channels} টি")
@@ -75,19 +60,40 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                # ক্যাচ হওয়া টোকেন চেক করা
-                stream_url = ""
-                for key, val in captured_tokens.items():
-                    if key.lower() in title.lower().replace(" ", ""):
-                        stream_url = val
-                        break
+                captured_stream = []
 
-                # যদি সরাসরি নেটওয়ার্কে ক্যাচ না করে, তবে data-source এর সাথে ব্যাকএন্ড রুল অনুযায়ী লিংক তৈরি করা
-                if not stream_url:
+                # প্রতিবার ক্লিকের সময় রিকোয়েস্ট ইন্টারসেপ্ট করার জন্য লোকাল লিসেনার
+                def handle_request(request):
+                    req_url = request.url
+                    if "index.fmp4.m3u8" in req_url and "token=" in req_url:
+                        if req_url not in captured_stream:
+                            captured_stream.append(req_url)
+
+                page.on("request", handle_request)
+
+                try:
+                    # দ্রুত স্ক্রোল ও ক্লিক
+                    link.scroll_into_view_if_needed()
+                    link.click()
+                    
+                    # টোকেন আসার জন্য মাত্র ২.৫ থেকে ৩ সেকেন্ড অপেক্ষা (সময় কমানোর জন্য অপ্টিমাইজড)
+                    time.sleep(2.8)
+                except Exception as e:
+                    log_status("warning", f"[{title}] ক্লিকে সমস্যা: {str(e)}")
+
+                page.remove_listener("request", handle_request)
+
+                stream_url = ""
+                if captured_stream:
+                    # একদম ফ্রেশ টোকেনযুক্ত লিংকটি নেওয়া
+                    stream_url = captured_stream[-1]
+                    log_status("success", f"[{title}] টোকেনসহ লিংক সফলভাবে ক্যাচ হয়েছে!")
+                else:
+                    # ফলব্যাক: যদি নেটওয়ার্কে হঠাৎ না ধরে, তবে ডেটা সোর্স থেকে নেওয়া
                     data_source = link.get_attribute("data-source")
                     if data_source:
-                        base_backend = data_source.split("/embed.html")[0]
-                        stream_url = f"{base_backend}/index.fmp4.m3u8"
+                        stream_url = data_source
+                        log_status("warning", f"[{title}] টোকেন পাওয়া যায়নি, বেস লিংক ব্যবহার করা হয়েছে।")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
@@ -95,7 +101,6 @@ def scrape_channels():
                         "logo": logo_url,
                         "url": stream_url
                     })
-                    log_status("success", f"[{title}] লিংক সফলভাবে যোগ করা হয়েছে!")
 
             # প্লেলিস্ট ফাইল তৈরি
             with open(M3U_FILE, "w", encoding="utf-8") as f:
