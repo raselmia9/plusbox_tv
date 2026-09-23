@@ -20,6 +20,69 @@ def log_status(level, message):
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(log_msg + "\n")
 
+def format_channel_name(filename):
+    # ফাইলের নাম যেমন 'btvworld.png' থেকে সুন্দর নাম তৈরি করা
+    name = filename.split('/')[-1].split('.')[0]
+    
+    # কিছু পরিচিত চ্যানেলের নাম সুন্দর করার ম্যাপিং বা ফরম্যাটিং
+    name_mapping = {
+        "btvworld": "BTV World",
+        "btv": "BTV",
+        "atnbangla": "ATN Bangla",
+        "atnnews": "ATN News",
+        "bijoytv": "Bijoy TV",
+        "asiantv": "Asian TV",
+        "banglavision": "Banglavision",
+        "channel24": "Channel 24",
+        "channeli": "Channel i",
+        "dbcnews": "DBC News",
+        "channel9": "Channel 9",
+        "deeptotv": "Deepto TV",
+        "deshtv": "Desh TV",
+        "ekattortv": "Ekattor TV",
+        "ekusheytv": "Ekushey TV",
+        "tsports": "T Sports",
+        "independent": "Independent TV",
+        "gtv": "GTV",
+        "jamunatv": "Jamuna TV",
+        "maasranga": "Maasranga TV",
+        "mytv": "My TV",
+        "starnews": "Star News",
+        "news24": "News24",
+        "ntv": "NTV",
+        "rtv": "RTV",
+        "somoytv": "Somoy TV",
+        "ekhontv": "Ekhon TV",
+        "colorsbangla": "Colors Bangla",
+        "indiatoday": "India Today",
+        "bloomberg": "Bloomberg",
+        "russiatoday": "Russia Today",
+        "redbulltv": "Red Bull TV",
+        "aljazeera": "Al Jazeera",
+        "enterr10": "Enterr10",
+        "discoveryhdworld": "Discovery HD World",
+        "animalplanet": "Animal Planet",
+        "ptvsports": "PTV Sports",
+        "sonytv": "Sony TV",
+        "sonyaath": "Sony Aath",
+        "sonymaxhd": "Sony Max HD",
+        "ten1": "Ten Sports 1",
+        "ten2": "Ten Sports 2",
+        "ten3": "Ten Sports 3",
+        "starsports1hd": "Star Sports 1 HD",
+        "starsports2hd": "Star Sports 2 HD",
+        "starsportsselect1": "Star Sports Select 1",
+        "starsportsselect2": "Star Sports Select 2",
+        "eurosport": "Eurosport",
+        "btsportsespn": "BT Sport ESPN",
+        "starjalshahd": "Star Jalsha HD",
+        "stargoldhd": "Star Gold HD",
+        "zeebanglahd": "Zee Bangla HD",
+        "zeecinemahd": "Zee Cinema HD"
+    }
+    
+    return name_mapping.get(name, name.replace('-', ' ').title())
+
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         f.write("--- PlusBox TV Scraper Status Log ---\n\n")
@@ -27,7 +90,7 @@ def scrape_channels():
     log_status("info", "স্ক্রিপ্ট সফলভাবে শুরু হয়েছে...")
 
     extracted_channels = []
-    captured_streams = set()
+    captured_streams = {}
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -36,13 +99,13 @@ def scrape_channels():
         )
         page = context.new_page()
 
-        # নেটওয়ার্ক রিকোয়েস্ট থেকে সরাসরি m3u8 বা স্ট্রিম লিংক ট্র্যাক করার জন্য
+        # নেটওয়ার্ক রিকোয়েস্ট বা m3u8 লিংক ট্র্যাক করার জন্য
         def handle_request(request):
             req_url = request.url
-            if ".m3u8" in req_url or "stream" in req_url or "playlist" in req_url:
-                if req_url not in captured_streams:
-                    captured_streams.add(req_url)
-                    log_status("debug", f"নেটওয়ার্ক স্ট্রিম লিংক পাওয়া গেছে: {req_url}")
+            if ".m3u8" in req_url or "stream" in req_url:
+                log_status("debug", f"স্ট্রিম লিংক পাওয়া গেছে: {req_url}")
+                # যদি লিংকে কোনো চ্যানেল বা আইডি ম্যাচ করে তা সেভ করা
+                captured_streams[req_url] = req_url
 
         page.on("request", handle_request)
 
@@ -51,74 +114,56 @@ def scrape_channels():
             page.goto(URL, timeout=60000)
             page.wait_for_load_state("networkidle")
             
-            time.sleep(5)  # পেজ ও স্লাইডার পুরোপুরি লোড হওয়ার সময় দেওয়া
+            time.sleep(5)
 
-            log_status("info", "চ্যানেল কার্ড, টাইটেল এবং লোগো এক্সট্রাক্ট করা হচ্ছে...")
+            log_status("info", "চ্যানেল লোগো এবং লিংক প্রসেস করা হচ্ছে...")
 
-            # স্লাইডার বা চ্যানেল আইটেমগুলোর সম্ভাব্য কন্টেইনার বা কার্ড খোঁজা
-            # সাধারণত <a>, <div> অথবা <li> ট্যাগের ভেতরে ইমেজ এবং টেক্সট থাকে
-            channel_cards = page.query_selector_all("a, .channel-item, .swiper-slide, div")
+            images = page.query_selector_all("img")
             
-            for card in channel_cards:
-                img = card.query_selector("img")
-                if img:
-                    src = img.get_attribute("src")
-                    alt = img.get_attribute("alt")
-                    
-                    # যদি লোগো বা src পাওয়া যায়
-                    if src:
-                        if src.startswith("/"):
-                            logo_url = "https://plusbox.tv" + src
-                        elif not src.startswith("http"):
-                            logo_url = "https://plusbox.tv/" + src
-                        else:
-                            logo_url = src
+            for img in images:
+                src = img.get_attribute("src")
+                if src and "channels/" in src:
+                    if src.startswith("/"):
+                        logo_url = "https://plusbox.tv" + src
+                    elif not src.startswith("http"):
+                        logo_url = "https://plusbox.tv/" + src
+                    else:
+                        logo_url = src
 
-                        # চ্যানেলের নাম খোঁজা (alt থেকে অথবা কার্ডের ভেতরের টেক্সট থেকে)
-                        title = ""
-                        if alt and alt.strip() != "":
-                            title = alt.strip()
-                        else:
-                            card_text = card.inner_text().strip()
-                            if card_text and len(card_text) < 50:
-                                title = card_text.split('\n')[0]
-                        
-                        if not title:
-                            title = "Unknown Channel"
+                    # ফাইলের নাম থেকে সুন্দর টাইটেল তৈরি
+                    title = format_channel_name(src)
 
-                        # চ্যানেলের নিজস্ব লিংক বা স্ট্রিম লিংক খোঁজা (যদি অ্যাট্রিবিউটে থাকে)
-                        href = card.get_attribute("href")
-                        data_link = card.get_attribute("data-url") or card.get_attribute("data-stream")
-                        
-                        stream_url = "https://plusbox.tv/"  # ডিফল্ বা ফলব্যাক লিংক
-                        if data_link:
-                            stream_url = data_link
-                        elif href and href != "#" and "http" in href:
-                            stream_url = href
+                    # স্ট্রিম লিংকের জন্য সাইটের মূল ডোমেইন বা নির্দিষ্ট স্ট্রিম হ্যান্ডেল
+                    # যেহেতু সাইটটি ক্লিক করলে প্লেয়ারে চালায়, তাই ডিফল্ট বা পেজের মূল লিংক দেওয়া যেতে পারে
+                    stream_url = "https://plusbox.tv/" 
 
-                        # ডুপ্লিকেট এড়াতে লিস্টে যোগ করা
-                        if not any(ch['logo'] == logo_url for ch in extracted_channels):
+                    # যদি ক্যাচ করা কোনো m3u8 লিংক থাকে তা অ্যাসাইন করা
+                    if captured_streams:
+                        stream_url = list(captured_streams.values())[0]
+
+                    # ডুপ্লিকেট এড়ানোর চেক
+                    if not any(ch['logo'] == logo_url for ch in extracted_channels):
+                        if "logo.png" not in logo_url and "appdownload" not in logo_url:
                             extracted_channels.append({
                                 "title": title,
                                 "logo": logo_url,
                                 "url": stream_url
                             })
 
-            log_status("info", f"মোট ইউনিক চ্যানেল কার্ড পাওয়া গেছে: {len(extracted_channels)} টি")
+            log_status("info", f"মোট কার্যকর চ্যানেল পাওয়া গেছে: {len(extracted_channels)} টি")
 
             # প্লেলিস্ট ফাইল তৈরি করা
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 if len(extracted_channels) > 0:
                     for ch in extracted_channels:
-                        # যদি নেটওয়ার্ক থেকে ধরা কোনো স্ট্রিম লিংক থাকে, সেগুলো অ্যাসাইন করা যেতে পারে
                         f.write(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" ,{ch["title"]}\n')
                         f.write(f'{ch["url"]}\n')
-                    log_status("success", f"প্লেলিস্ট সফলভাবে আপডেট হয়েছে! মোট চ্যানেল: {len(extracted_channels)}")
+                    log_status("success", "প্লেলিস্ট সফলভাবে আপডেট এবং সেভ করা হয়েছে!")
                 else:
-                    f.write('#EXTINF:-1, PlusBox TV No Data\n')
+                    f.write('#EXTINF:-1, PlusBox TV No Channel Found\n')
                     f.write('https://plusbox.tv/\n')
-                    log_status("warning", "চ্যানেল কার্ড বা নাম পাওয়া যায়নি।")
+                    log_status("warning", "কোনো চ্যানেল পাওয়া যায়নি।")
 
         except Exception as e:
             log_status("error", f"ত্রুটি ঘটেছে: {str(e)}")
