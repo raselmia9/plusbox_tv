@@ -1,109 +1,109 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="img/channels/btvworld.png" ,BTVWorld
-https://backend.plusbox.tv/BTVWorld/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BTVWorld/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/btv.png" ,BTV
-https://backend.plusbox.tv/BTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/atnbangla.png" ,ATNBangla
-https://backend.plusbox.tv/ATNBangla/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ATNBangla/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/atnnews.png" ,ATNNews
-https://backend.plusbox.tv/ATNNews/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ATNNews/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/bijoytv.png" ,BijoyTV
-https://backend.plusbox.tv/BijoyTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BijoyTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/asiantv.png" ,AsianTV
-https://backend.plusbox.tv/AsianTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/AsianTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/banglavision.png" ,BanglaVision
-https://backend.plusbox.tv/BanglaVision/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BanglaVision/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/channel24.png" ,Channel24
-https://backend.plusbox.tv/Channel24/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/Channel24/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/channeli.png" ,ChannelI
-https://backend.plusbox.tv/ChannelI/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ChannelI/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/dbcnews.png" ,DBCNews
-https://backend.plusbox.tv/DBCNews/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/DBCNews/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/channel9.png" ,Channel9
-https://backend.plusbox.tv/Channel9/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/Channel9/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/deeptotv.png" ,DeeptoTV
-https://backend.plusbox.tv/DeeptoTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/DeeptoTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/deshtv.png" ,DeshTV
-https://backend.plusbox.tv/DeshTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/DeshTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ekattortv.png" ,EkattorTV
-https://backend.plusbox.tv/EkattorTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/EkattorTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ekusheytv.png" ,EkusheyTv
-https://backend.plusbox.tv/EkusheyTv/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/EkusheyTv/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/tsports.png" ,TSportsHD
-https://backend.plusbox.tv/TSportsHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/TSportsHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/independent.png" ,IndependentTV
-https://backend.plusbox.tv/IndependentTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/IndependentTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/gtv.png" ,GaziTVHD
-https://backend.plusbox.tv/GaziTVHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/GaziTVHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/jamunatv.png" ,JamunaTV
-https://backend.plusbox.tv/JamunaTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/JamunaTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/maasranga.png" ,Maasranga
-https://backend.plusbox.tv/Maasranga/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/Maasranga/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/mytv.png" ,MyTV
-https://backend.plusbox.tv/MyTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/MyTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starnews.png" ,StarNews
-https://backend.plusbox.tv/StarNews/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarNews/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/news24.png" ,News24
-https://backend.plusbox.tv/News24/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/News24/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ntv.png" ,NTV
-https://backend.plusbox.tv/NTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/NTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/rtv.png" ,RTV
-https://backend.plusbox.tv/RTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/RTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/somoytv.png" ,SomoyTv
-https://backend.plusbox.tv/SomoyTv/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SomoyTv/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ekhontv.png" ,EkhonTV
-https://backend.plusbox.tv/EkhonTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/EkhonTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/colorsbangla.png" ,ColorsBangla
-https://backend.plusbox.tv/ColorsBangla/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ColorsBangla/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/indiatoday.png" ,IndiaToday
-https://backend.plusbox.tv/IndiaToday/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/IndiaToday/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/bloomberg.png" ,BloombergTV
-https://backend.plusbox.tv/BloombergTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BloombergTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/russiatoday.png" ,RussiaToday
-https://backend.plusbox.tv/RussiaToday/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/RussiaToday/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/redbulltv.png" ,RedBullTV
-https://backend.plusbox.tv/RedBullTV/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/RedBullTV/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/aljazeera.png" ,Aljazeera
-https://backend.plusbox.tv/Aljazeera/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/Aljazeera/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/enterr10.png" ,Enterr10
-https://backend.plusbox.tv/Enterr10/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/Enterr10/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/discoveryhdworld.png" ,DiscoveryHD
-https://backend.plusbox.tv/DiscoveryHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/DiscoveryHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/animalplanet.png" ,AnimalPlanet
-https://backend.plusbox.tv/AnimalPlanet/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/AnimalPlanet/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ptvsports.png" ,PTVSports
-https://backend.plusbox.tv/PTVSports/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/PTVSports/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/sonytv.png" ,SonyTVHD
-https://backend.plusbox.tv/SonyTVHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyTVHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/sonyaath.png" ,SonyAath
-https://backend.plusbox.tv/SonyAath/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyAath/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/sonymaxhd.png" ,SonyMaxHD
-https://backend.plusbox.tv/SonyMaxHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyMaxHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ten1.png" ,SonyTen1HD
-https://backend.plusbox.tv/SonyTen1HD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyTen1HD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ten2.png" ,SonyTen2HD
-https://backend.plusbox.tv/SonyTen2HD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyTen2HD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/ten3.png" ,SonyTen3HD
-https://backend.plusbox.tv/SonyTen3HD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/SonyTen3HD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starsports1hd.png" ,StarSports1HD
-https://backend.plusbox.tv/StarSports1HD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarSports1HD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starsports2hd.png" ,StarSports2HD
-https://backend.plusbox.tv/StarSports2HD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarSports2HD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starsportsselect1.png" ,StarSportsSelect1
-https://backend.plusbox.tv/StarSportsSelect1/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarSportsSelect1/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starsportsselect2.png" ,StarSportsSelect2
-https://backend.plusbox.tv/StarSportsSelect2/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarSportsSelect2/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/uni8.png" ,UNITE8Sports1
-https://backend.plusbox.tv/UNITE8Sports1/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/UNITE8Sports1/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/eurosport.png" ,EUROSPORT
-https://backend.plusbox.tv/EUROSPORT/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/EUROSPORT/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/btsportsespn.png" ,BTSportsEspn
-https://backend.plusbox.tv/BTSportsEspn/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/BTSportsEspn/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/starjalshahd.png" ,StarJalshaHD
-https://backend.plusbox.tv/StarJalshaHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarJalshaHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/stargoldhd.png" ,StarGoldHD
-https://backend.plusbox.tv/StarGoldHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/StarGoldHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/zeebanglahd.png" ,ZeeBanglaHD
-https://backend.plusbox.tv/ZeeBanglaHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ZeeBanglaHD/index.fmp4.m3u8?token=
 #EXTINF:-1 tvg-logo="img/channels/zeecinemahd.png" ,ZeeCinemaHD
-https://backend.plusbox.tv/ZeeCinemaHD/embed.html?mute=false&autoplay=true&volume=50&token=
+https://backend.plusbox.tv/ZeeCinemaHD/index.fmp4.m3u8?token=
