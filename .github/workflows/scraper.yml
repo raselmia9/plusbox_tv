@@ -32,5 +32,5 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "action@github.com"
-          git add playlist.m3u status.txt
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update playlist and status [skip ci]" && git push)
+          git add playlist.m3u status.txt source_code.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update playlist, status and html source [skip ci]" && git push)
