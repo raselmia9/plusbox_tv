@@ -21,9 +21,9 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV 100% Working Direct Iframe Extraction Log ---\n\n")
+        f.write("--- PlusBox TV Direct .m3u8 Token Capture Log ---\n\n")
 
-    log_status("info", "চূড়ান্ত ও ১০০% কার্যকরী স্ক্রিপ্ট শুরু হয়েছে...")
+    log_status("info", "সঠিক .m3u8 ও টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
@@ -64,31 +64,37 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                stream_url = ""
+                captured_m3u8 = []
+
+                # নেটওয়ার্ক ইন্টারসেপ্ট করার ফাংশন যা শুধু m3u8 এবং token খুঁজবে
+                def handle_request(request):
+                    req_url = request.url
+                    # আমরা সুনির্দিষ্টভাবে fmp4 বা m3u8 এবং টোকেনযুক্ত রিকোয়েস্ট খুঁজছি
+                    if ("m3u8" in req_url or "fmp4" in req_url) and "token=" in req_url:
+                        if req_url not in captured_m3u8:
+                            captured_m3u8.append(req_url)
+
+                page.on("request", handle_request)
+
                 try:
-                    # ১. থাম্বনেইলে সরাসরি ক্লিক করা (যা ওয়েবসাইটটির নিজের startChannel ফাংশন ট্রিগার করবে)
+                    # থাম্বনেইলে ক্লিক করা যাতে প্লেয়ার টোকেনসহ m3u8 রিকোয়েস্ট পাঠায়
                     link.scroll_into_view_if_needed()
                     link.click()
                     
-                    # ২. টোকেন জেনারেট হয়ে আইফ্রেমের ভেতরে সোর্স বসানোর জন্য ৩ সেকেন্ড অপেক্ষা
-                    time.sleep(3)
-
-                    # ৩. সরাসরি আইফ্রেমের 'src' অ্যাট্রিবিউট রিড করা (যেখানে ১০০% জেনুইন টোকেনসহ লিংক থাকে)
-                    iframe = page.query_selector("iframe#player")
-                    if iframe:
-                        iframe_src = iframe.get_attribute("src")
-                        if iframe_src and "token=" in iframe_src:
-                            stream_url = iframe_src
-                            log_status("success", f"[{title}] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!")
-                        else:
-                            # যদি আইফ্রেমের সোর্স সরাসরি না মিলে, তবে data-source থেকে টোকেন বা বেস লিংক নেওয়া
-                            data_source = link.get_attribute("data-source")
-                            if data_source:
-                                stream_url = data_source
-                                log_status("warning", f"[{title}] আইফ্রেম থেকে টোকেন মেলেনি, ডেটা-সোর্স ব্যবহার করা হয়েছে।")
-                    
+                    # টোকেন জেনারেট হয়ে m3u8 রিকোয়েস্ট আসার জন্য ৩.৫ সেকেন্ড অপেক্ষা
+                    time.sleep(3.5)
                 except Exception as e:
-                    log_status("warning", f"[{title}] প্রসেস করতে গিয়ে সমস্যা: {str(e)}")
+                    log_status("warning", f"[{title}] ক্লিকে সমস্যা: {str(e)}")
+
+                page.remove_listener("request", handle_request)
+
+                stream_url = ""
+                if captured_m3u8:
+                    # একদম শেষের ফ্রেশ .m3u8 লিংকটি পিক করা
+                    stream_url = captured_m3u8[-1]
+                    log_status("success", f"[{title}] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!")
+                else:
+                    log_status("warning", f"[{title}] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
@@ -97,7 +103,7 @@ def scrape_channels():
                         "url": stream_url
                     })
 
-            # প্লেলিস্ট ফাইল তৈরি
+            # প্লেলিস্ট ফাইল তৈরি (.m3u)
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
