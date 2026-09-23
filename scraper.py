@@ -22,13 +22,14 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Direct m3u8 Capture Log ---\n\n")
+        f.write("--- PlusBox TV Dynamic Token m3u8 Capture Log ---\n\n")
 
     log_status("info", "স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
     with sync_playwright() as p:
+        # headless=False দিয়ে দেখতে পারেন ব্রাউজারে কি হচ্ছে
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -56,51 +57,52 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                # নেটওয়ার্ক থেকে আসল m3u8 লিংক ও টোকেন ক্যাপচার করার ভ্যারিয়েবল
                 captured_m3u8 = []
 
+                # নেটওয়ার্ক রিকোয়েস্ট ইন্টারসেপ্ট করার ফাংশন
                 def handle_request(request):
                     req_url = request.url
-                    # আপনার দেওয়া ফরম্যাট অনুযায়ী index.m3u8 বা টোকেনযুক্ত স্ট্রিম রিকোয়েস্ট ধরা
-                    if "index.m3u8" in req_url and "token=" in req_url:
+                    # যখনই টোকেনসহ m3u8 বা fmp4 রিকোয়েস্ট যাবে, সেটা ক্যাচ করবে
+                    if (".m3u8" in req_url or ".fmp4" in req_url) and "token=" in req_url:
                         if req_url not in captured_m3u8:
                             captured_m3u8.append(req_url)
 
                 page.on("request", handle_request)
 
                 try:
-                    # চ্যানেলে ক্লিক করে ভিডিও প্লেয়ার ট্রিগার করা যাতে ব্রাউজার আসল m3u8 রিকোয়েস্ট পাঠায়
+                    # হোমপেজে চ্যানেলের থাম্বনেইলে ক্লিক করা, যা জাভাস্ক্রিপ্ট দিয়ে ডাইনামিক টোকেন এনে প্লেয়ারে লোড করবে
                     link.click()
-                    time.sleep(3) # লিংক জেনারেট হওয়ার জন্য পর্যাপ্ত সময়
+                    # টোকেন জেনারেট হয়ে স্ট্রিম রিকোয়েস্ট সার্ভার থেকে আসার জন্য ৩ সেকেন্ড সময় দেওয়া
+                    time.sleep(3.5)
                 except Exception as click_err:
                     log_status("warning", f"{title} এ ক্লিক করার সময় সমস্যা হয়েছে: {str(click_err)}")
 
+                # লিসেনার রিমুভ করা যাতে পরের চ্যানেলে জগাখিচুড়ি না পাক
                 page.remove_listener("request", handle_request)
 
-                # যদি সরাসরি নিখুঁত m3u8 লিংক পাওয়া যায়
                 if captured_m3u8:
+                    # তালিকার প্রথম কার্যকর .m3u8 লিংকটি নেওয়া
                     stream_url = captured_m3u8[0]
-                    log_status("success", f"[{title}] আসল m3u8 লিংক পাওয়া গেছে!")
+                    log_status("success", f"[{title}] ডাইনামিক টোকেনযুক্ত m3u8 লিংক পাওয়া গেছে!")
                 else:
-                    # ফলব্যাক হিসেবে data-source ব্যবহার করা (যদি নেটওয়ার্কে ধরতে না পারে)
-                    stream_url = link.get_attribute("data-source") or "https://plusbox.tv/"
-                    log_status("warning", f"[{title}] নেটওয়ার্কে m3u8 না পাওয়ায় ডিফল্ট সোর্স ব্যবহার করা হয়েছে।")
+                    stream_url = ""
+                    log_status("warning", f"[{title}] লিংক ক্যাপচার করা সম্ভব হয়নি।")
 
-                if logo_url:
+                if stream_url and logo_url:
                     extracted_channels.append({
                         "title": title,
                         "logo": logo_url,
                         "url": stream_url
                     })
 
-            # .m3u প্লেলিস্ট তৈরি করা (কোনো অতিরিক্ত Referer ছাড়া)
+            # চূড়ান্ত .m3u প্লেলিস্ট ফাইল তৈরি করা
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
                     f.write(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" ,{ch["title"]}\n')
                     f.write(f'{ch["url"]}\n')
 
-            log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: {len(extracted_channels)}")
+            log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট কার্যকরী চ্যানেল: {len(extracted_channels)}")
 
         except Exception as e:
             log_status("error", f"ত্রুটি ঘটেছে: {str(e)}")
