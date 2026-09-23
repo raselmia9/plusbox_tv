@@ -21,34 +21,50 @@ def log_status(level, message):
         f.write(log_msg + "\n")
 
 def scrape_channels():
+    # স্ট্যাটাস ফাইল রিসেট করা
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Ultimate Stream Capture Log ---\n\n")
+        f.write("--- PlusBox TV Detailed Debug Log ---\n\n")
 
-    log_status("info", "স্ক্রিপ্ট শুরু হয়েছে...")
+    log_status("info", "স্ক্রিপ্ট সফলভাবে শুরু হয়েছে...")
+
     extracted_channels = []
 
     with sync_playwright() as p:
-        # আমরা ব্রাউজার দৃশ্যমান (headless=False) রাখতে পারি যাতে আপনি দেখতে পান কোথায় ক্লিক হচ্ছে
-        browser = p.chromium.launch(headless=False)
+        log_status("info", "Chromium ব্রাউজার লঞ্চ করা হচ্ছে (Headless মোড)...")
+        
+        # গিটহাব অ্যাকশনসের জন্য প্রয়োজনীয় আর্গুমেন্টসহ ব্রাউজার লঞ্চ
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+        )
+        
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
         page = context.new_page()
 
         try:
-            log_status("info", f"লিংক ভিজিট করা হচ্ছে: {URL}")
+            log_status("info", f"ওয়েবসাইট ভিজিট করা হচ্ছে: {URL}")
             page.goto(URL, timeout=60000)
             page.wait_for_load_state("networkidle")
             time.sleep(3)
+            log_status("success", "ওয়েবসাইট সফলভাবে লোড হয়েছে।")
 
-            # সব চ্যানেল থাম্বনেইলগুলো খুঁজে বের করা
+            # চ্যানেল থাম্বনেইলগুলো খুঁজে বের করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
-            log_status("debug", f"মোট চ্যানেল পাওয়া গেছে: {len(channel_links)} টি")
+            total_channels = len(channel_links)
+            log_status("info", f"মোট চ্যানেল পাওয়া গেছে: {total_channels} টি")
+
+            if total_channels == 0:
+                log_status("error", "কোনো চ্যানেল এলিমেন্ট পাওয়া যায়নি! সিলেক্টর পরিবর্তন হতে পারে।")
+                return
 
             for index, link in enumerate(channel_links):
                 data_name = link.get_attribute("data-name")
                 href = link.get_attribute("href")
                 title = data_name if data_name else (href.replace("#", "").strip() if href else f"Channel {index+1}")
+
+                log_status("info", f"--- [{index+1}/{total_channels}] প্রসেস করা হচ্ছে: {title} ---")
 
                 img = link.query_selector("img")
                 logo_url = ""
@@ -59,49 +75,55 @@ def scrape_channels():
 
                 captured_streams = []
 
-                # নেটওয়ার্ক ট্রাফিক ট্র্যাক করার ফাংশন (এক্সটেনশন যেভাবে ধরে)
+                # নেটওয়ার্ক রিকোয়েস্ট ইন্টারসেপ্ট করার লজিক
                 def handle_request(request):
                     req_url = request.url
-                    # m3u8, fmp4 অথবা টোকেনযুক্ত যেকোনো মিডিয়া স্ট্রিম রিকোয়েস্ট পেলে তা সেভ করবে
                     if ("m3u8" in req_url or "fmp4" in req_url or "preview.mp4" in req_url) and "token=" in req_url:
                         if req_url not in captured_streams:
                             captured_streams.append(req_url)
+                            log_status("debug", f"ক্যাপচারড লিংক: {req_url[:80]}...")
 
                 page.on("request", handle_request)
 
                 try:
-                    log_status("info", f"[{title}] চ্যানেলে ক্লিক করা হচ্ছে...")
-                    # নিখুঁতভাবে ক্লিক করার জন্য স্ক্রল করে এলিমেন্টে যাওয়া এবং ক্লিক করা
+                    # এলিমেন্টে স্ক্রোল করে ক্লিক করা
                     link.scroll_into_view_if_needed()
                     link.click()
+                    log_status("info", f"[{title}] থাম্বনেইলে সফলভাবে ক্লিক করা হয়েছে।")
                     
-                    # ভিডিও প্লেয়ারের iframe লোড হয়ে টোকেনসহ রিকোয়েস্ট সার্ভারে হিট করার জন্য ৪ সেকেন্ড সময় দেওয়া
+                    # ভিডিও প্লেয়ার রেন্ডার ও টোকেন জেনারেট হওয়ার জন্য সময় দেওয়া
                     time.sleep(4)
 
-                    # অনেক সময় মূল পেজ ছাড়াও iframe এর ভেতরে রিকোয়েস্ট যায়, তাই আইফ্রেম চেক করা
-                    frames = page.frames
-                    for frame in frames:
-                        if "backend.plusbox.tv" in frame.url:
-                            log_status("debug", f"[{title}] আইফ্রেম ফেম পাওয়া গেছে: {frame.url}")
+                    # আইফ্রেম চেক করা
+                    iframe_element = page.query_selector("#player")
+                    if iframe_element:
+                        log_status("debug", f"[{title}] প্লেয়ার আইফ্রেম পাওয়া গেছে।")
+                    else:
+                        log_status("warning", f"[{title}] প্লেয়ার আইফ্রেম খুঁজে পাওয়া যায়নি।")
 
                 except Exception as click_err:
-                    log_status("warning", f"[{title}] ক্লিক করার সময় সমস্যা: {str(click_err)}")
+                    log_status("warning", f"[{title}] ক্লিক বা ইন্টারঅ্যাকশনে সমস্যা: {str(click_err)}")
 
-                # লিসেনার রিমুভ করা যাতে আগের চ্যানেলের ডাটা পরেরটিতে না যায়
+                # লিসেনার রিমুভ করা
                 page.remove_listener("request", handle_request)
 
                 stream_url = ""
                 if captured_streams:
-                    # অগ্রাধিকার দেওয়া হবে .m3u8 লিংকটিকে, না পেলে preview.mp4 নেওয়া হবে
                     m3u8_list = [s for s in captured_streams if "m3u8" in s]
                     if m3u8_list:
                         stream_url = m3u8_list[0]
                     else:
                         stream_url = captured_streams[0]
                     
-                    log_status("success", f"[{title}] সফলভাবে লিংক পাওয়া গেছে: {stream_url}")
+                    log_status("success", f"[{title}] সফলভাবে স্ট্রিম লিংক পাওয়া গেছে!")
                 else:
-                    log_status("warning", f"[{title}] কোনো স্ট্রিম লিংক ক্যাপচার করা যায়নি।")
+                    # ফলব্যাক হিসেবে data-source ব্যবহার করা যদি নেটওয়ার্কে ক্যাচ না করে
+                    data_source = link.get_attribute("data-source")
+                    if data_source:
+                        stream_url = data_source
+                        log_status("warning", f"[{title}] নেটওয়ার্কে লিংক না পাওয়ায় data-source ব্যবহার করা হয়েছে।")
+                    else:
+                        log_status("error", f"[{title}] কোনো লিংকই পাওয়া যায়নি!")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
@@ -110,7 +132,7 @@ def scrape_channels():
                         "url": stream_url
                     })
 
-            # চূড়ান্ত .m3u প্লেলিস্ট তৈরি করা
+            # প্লেলিস্ট ফাইল তৈরি
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
@@ -124,7 +146,7 @@ def scrape_channels():
         
         finally:
             browser.close()
-            log_status("info", "প্রসেস শেষ হয়েছে।")
+            log_status("info", "ব্রাঊজার বন্ধ করা হয়েছে। প্রসেস সমাপ্ত।")
 
 if __name__ == "__main__":
     scrape_channels()
