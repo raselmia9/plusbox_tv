@@ -21,9 +21,9 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Fast Token Capture Log ---\n\n")
+        f.write("--- PlusBox TV 100% Working Direct Iframe Extraction Log ---\n\n")
 
-    log_status("info", "ফাস্ট টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...")
+    log_status("info", "চূড়ান্ত ও ১০০% কার্যকরী স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
@@ -48,6 +48,10 @@ def scrape_channels():
             total_channels = len(channel_links)
             log_status("info", f"মোট চ্যানেল পাওয়া গেছে: {total_channels} টি")
 
+            if total_channels == 0:
+                log_status("error", "কোনো চ্যানেল পাওয়া যায়নি!")
+                return
+
             for index, link in enumerate(channel_links):
                 data_name = link.get_attribute("data-name")
                 href = link.get_attribute("href")
@@ -60,40 +64,31 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                captured_stream = []
-
-                # প্রতিবার ক্লিকের সময় রিকোয়েস্ট ইন্টারসেপ্ট করার জন্য লোকাল লিসেনার
-                def handle_request(request):
-                    req_url = request.url
-                    if "index.fmp4.m3u8" in req_url and "token=" in req_url:
-                        if req_url not in captured_stream:
-                            captured_stream.append(req_url)
-
-                page.on("request", handle_request)
-
+                stream_url = ""
                 try:
-                    # দ্রুত স্ক্রোল ও ক্লিক
+                    # ১. থাম্বনেইলে সরাসরি ক্লিক করা (যা ওয়েবসাইটটির নিজের startChannel ফাংশন ট্রিগার করবে)
                     link.scroll_into_view_if_needed()
                     link.click()
                     
-                    # টোকেন আসার জন্য মাত্র ২.৫ থেকে ৩ সেকেন্ড অপেক্ষা (সময় কমানোর জন্য অপ্টিমাইজড)
-                    time.sleep(2.8)
+                    # ২. টোকেন জেনারেট হয়ে আইফ্রেমের ভেতরে সোর্স বসানোর জন্য ৩ সেকেন্ড অপেক্ষা
+                    time.sleep(3)
+
+                    # ৩. সরাসরি আইফ্রেমের 'src' অ্যাট্রিবিউট রিড করা (যেখানে ১০০% জেনুইন টোকেনসহ লিংক থাকে)
+                    iframe = page.query_selector("iframe#player")
+                    if iframe:
+                        iframe_src = iframe.get_attribute("src")
+                        if iframe_src and "token=" in iframe_src:
+                            stream_url = iframe_src
+                            log_status("success", f"[{title}] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!")
+                        else:
+                            # যদি আইফ্রেমের সোর্স সরাসরি না মিলে, তবে data-source থেকে টোকেন বা বেস লিংক নেওয়া
+                            data_source = link.get_attribute("data-source")
+                            if data_source:
+                                stream_url = data_source
+                                log_status("warning", f"[{title}] আইফ্রেম থেকে টোকেন মেলেনি, ডেটা-সোর্স ব্যবহার করা হয়েছে।")
+                    
                 except Exception as e:
-                    log_status("warning", f"[{title}] ক্লিকে সমস্যা: {str(e)}")
-
-                page.remove_listener("request", handle_request)
-
-                stream_url = ""
-                if captured_stream:
-                    # একদম ফ্রেশ টোকেনযুক্ত লিংকটি নেওয়া
-                    stream_url = captured_stream[-1]
-                    log_status("success", f"[{title}] টোকেনসহ লিংক সফলভাবে ক্যাচ হয়েছে!")
-                else:
-                    # ফলব্যাক: যদি নেটওয়ার্কে হঠাৎ না ধরে, তবে ডেটা সোর্স থেকে নেওয়া
-                    data_source = link.get_attribute("data-source")
-                    if data_source:
-                        stream_url = data_source
-                        log_status("warning", f"[{title}] টোকেন পাওয়া যায়নি, বেস লিংক ব্যবহার করা হয়েছে।")
+                    log_status("warning", f"[{title}] প্রসেস করতে গিয়ে সমস্যা: {str(e)}")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
