@@ -1,113 +1,109 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/logo.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btvworld.png" ,BTV World
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/backup/img/appdownload.svg" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btv.png" ,BTV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btvworld.png" ,Previous
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/atnbangla.png" ,ATN Bangla
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/atnnews.png" ,ATN News
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/atnbangla.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/bijoytv.png" ,Bijoy TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/atnnews.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/asiantv.png" ,Asian TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/bijoytv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/banglavision.png" ,Banglavision
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/asiantv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channel24.png" ,Channel 24
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/banglavision.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channeli.png" ,Channel i
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channel24.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/dbcnews.png" ,DBC News
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channeli.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channel9.png" ,Channel 9
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/dbcnews.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/deeptotv.png" ,Deepto TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/channel9.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/deshtv.png" ,Desh TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/deeptotv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekattortv.png" ,Ekattor TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/deshtv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekusheytv.png" ,Ekushey TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekattortv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/tsports.png" ,T Sports
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekusheytv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/independent.png" ,Independent TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/tsports.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/gtv.png" ,GTV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/independent.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/jamunatv.png" ,Jamuna TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/gtv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/maasranga.png" ,Maasranga TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/jamunatv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/mytv.png" ,My TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/maasranga.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starnews.png" ,Star News
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/mytv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/news24.png" ,News24
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starnews.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ntv.png" ,NTV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/news24.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/rtv.png" ,RTV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ntv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/somoytv.png" ,Somoy TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/rtv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekhontv.png" ,Ekhon TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/somoytv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/colorsbangla.png" ,Colors Bangla
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ekhontv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/indiatoday.png" ,India Today
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/colorsbangla.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/bloomberg.png" ,Bloomberg
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/indiatoday.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/russiatoday.png" ,Russia Today
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/bloomberg.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/redbulltv.png" ,Red Bull TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/russiatoday.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/aljazeera.png" ,Al Jazeera
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/redbulltv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/enterr10.png" ,Enterr10
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/aljazeera.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/discoveryhdworld.png" ,Discovery HD World
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/enterr10.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/animalplanet.png" ,Animal Planet
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/discoveryhdworld.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ptvsports.png" ,PTV Sports
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/animalplanet.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonytv.png" ,Sony TV
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ptvsports.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonyaath.png" ,Sony Aath
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonytv.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonymaxhd.png" ,Sony Max HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonyaath.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten1.png" ,Ten Sports 1
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/sonymaxhd.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten2.png" ,Ten Sports 2
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten1.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten3.png" ,Ten Sports 3
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten2.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsports1hd.png" ,Star Sports 1 HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/ten3.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsports2hd.png" ,Star Sports 2 HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsports1hd.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsportsselect1.png" ,Star Sports Select 1
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsports2hd.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsportsselect2.png" ,Star Sports Select 2
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsportsselect1.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/uni8.png" ,Uni8
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starsportsselect2.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/eurosport.png" ,Eurosport
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/uni8.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btsportsespn.png" ,BT Sport ESPN
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/eurosport.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starjalshahd.png" ,Star Jalsha HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/btsportsespn.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/stargoldhd.png" ,Star Gold HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/starjalshahd.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/zeebanglahd.png" ,Zee Bangla HD
 https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/stargoldhd.png" ,Unknown Channel
-https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/zeebanglahd.png" ,Unknown Channel
-https://plusbox.tv/
-#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/zeecinemahd.png" ,Unknown Channel
+#EXTINF:-1 tvg-logo="https://plusbox.tv/img/channels/zeecinemahd.png" ,Zee Cinema HD
 https://plusbox.tv/
