@@ -1,60 +1,60 @@
---- PlusBox TV 100% Working Direct Iframe Extraction Log ---
+--- PlusBox TV Direct .m3u8 Token Capture Log ---
 
-🔵 [INFO] চূড়ান্ত ও ১০০% কার্যকরী স্ক্রিপ্ট শুরু হয়েছে...
+🔵 [INFO] সঠিক .m3u8 ও টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
 🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 54 টি
-🟢 [SUCCESS] [BTVWorld] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [BTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ATNBangla] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ATNNews] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [BijoyTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [AsianTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [BanglaVision] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [Channel24] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ChannelI] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [DBCNews] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [Channel9] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [DeeptoTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [DeshTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [EkattorTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [EkusheyTv] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [TSportsHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [IndependentTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [GaziTVHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [JamunaTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [Maasranga] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [MyTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarNews] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [News24] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [NTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [RTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SomoyTv] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [EkhonTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ColorsBangla] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [IndiaToday] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [BloombergTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [RussiaToday] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [RedBullTV] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [Aljazeera] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [Enterr10] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [DiscoveryHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [AnimalPlanet] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [PTVSports] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyTVHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyAath] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyMaxHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyTen1HD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyTen2HD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [SonyTen3HD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarSports1HD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarSports2HD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarSportsSelect1] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarSportsSelect2] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [UNITE8Sports1] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [EUROSPORT] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [BTSportsEspn] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarJalshaHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [StarGoldHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ZeeBanglaHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] [ZeeCinemaHD] টোকেনসহ পারফেক্ট লিংক পাওয়া গেছে!
-🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 54
+🟡 [WARNING] [BTVWorld] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [BTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [ATNBangla] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [ATNNews] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [BijoyTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [AsianTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [BanglaVision] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [Channel24] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [ChannelI] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [DBCNews] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [Channel9] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [DeeptoTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [DeshTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [EkattorTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [EkusheyTv] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟢 [SUCCESS] [TSportsHD] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [IndependentTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [GaziTVHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [JamunaTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [Maasranga] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [MyTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarNews] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [News24] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [NTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [RTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [SomoyTv] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [EkhonTV] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟢 [SUCCESS] [ColorsBangla] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [IndiaToday] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [BloombergTV] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [RussiaToday] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [RedBullTV] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [Aljazeera] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [Enterr10] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [DiscoveryHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [AnimalPlanet] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [PTVSports] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [SonyTVHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [SonyAath] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [SonyMaxHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [SonyTen1HD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [SonyTen2HD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [SonyTen3HD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarSports1HD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarSports2HD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarSportsSelect1] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] [StarSportsSelect2] সঠিক .m3u8 ও টোকেন লিংক পাওয়া গেছে!
+🟡 [WARNING] [UNITE8Sports1] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [EUROSPORT] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [BTSportsEspn] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarJalshaHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [StarGoldHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [ZeeBanglaHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟡 [WARNING] [ZeeCinemaHD] নেটওয়ার্কে .m3u8 লিংক পাওয়া যায়নি।
+🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 8
