@@ -22,15 +22,14 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Dynamic Token m3u8 Capture Log ---\n\n")
+        f.write("--- PlusBox TV Ultimate Stream Capture Log ---\n\n")
 
     log_status("info", "স্ক্রিপ্ট শুরু হয়েছে...")
-
     extracted_channels = []
 
     with sync_playwright() as p:
-        # headless=False দিয়ে দেখতে পারেন ব্রাউজারে কি হচ্ছে
-        browser = p.chromium.launch(headless=True)
+        # আমরা ব্রাউজার দৃশ্যমান (headless=False) রাখতে পারি যাতে আপনি দেখতে পান কোথায় ক্লিক হচ্ছে
+        browser = p.chromium.launch(headless=False)
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
@@ -42,6 +41,7 @@ def scrape_channels():
             page.wait_for_load_state("networkidle")
             time.sleep(3)
 
+            # সব চ্যানেল থাম্বনেইলগুলো খুঁজে বের করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
             log_status("debug", f"মোট চ্যানেল পাওয়া গেছে: {len(channel_links)} টি")
 
@@ -57,36 +57,51 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
-                captured_m3u8 = []
+                captured_streams = []
 
-                # নেটওয়ার্ক রিকোয়েস্ট ইন্টারসেপ্ট করার ফাংশন
+                # নেটওয়ার্ক ট্রাফিক ট্র্যাক করার ফাংশন (এক্সটেনশন যেভাবে ধরে)
                 def handle_request(request):
                     req_url = request.url
-                    # যখনই টোকেনসহ m3u8 বা fmp4 রিকোয়েস্ট যাবে, সেটা ক্যাচ করবে
-                    if (".m3u8" in req_url or ".fmp4" in req_url) and "token=" in req_url:
-                        if req_url not in captured_m3u8:
-                            captured_m3u8.append(req_url)
+                    # m3u8, fmp4 অথবা টোকেনযুক্ত যেকোনো মিডিয়া স্ট্রিম রিকোয়েস্ট পেলে তা সেভ করবে
+                    if ("m3u8" in req_url or "fmp4" in req_url or "preview.mp4" in req_url) and "token=" in req_url:
+                        if req_url not in captured_streams:
+                            captured_streams.append(req_url)
 
                 page.on("request", handle_request)
 
                 try:
-                    # হোমপেজে চ্যানেলের থাম্বনেইলে ক্লিক করা, যা জাভাস্ক্রিপ্ট দিয়ে ডাইনামিক টোকেন এনে প্লেয়ারে লোড করবে
+                    log_status("info", f"[{title}] চ্যানেলে ক্লিক করা হচ্ছে...")
+                    # নিখুঁতভাবে ক্লিক করার জন্য স্ক্রল করে এলিমেন্টে যাওয়া এবং ক্লিক করা
+                    link.scroll_into_view_if_needed()
                     link.click()
-                    # টোকেন জেনারেট হয়ে স্ট্রিম রিকোয়েস্ট সার্ভার থেকে আসার জন্য ৩ সেকেন্ড সময় দেওয়া
-                    time.sleep(3.5)
-                except Exception as click_err:
-                    log_status("warning", f"{title} এ ক্লিক করার সময় সমস্যা হয়েছে: {str(click_err)}")
+                    
+                    # ভিডিও প্লেয়ারের iframe লোড হয়ে টোকেনসহ রিকোয়েস্ট সার্ভারে হিট করার জন্য ৪ সেকেন্ড সময় দেওয়া
+                    time.sleep(4)
 
-                # লিসেনার রিমুভ করা যাতে পরের চ্যানেলে জগাখিচুড়ি না পাক
+                    # অনেক সময় মূল পেজ ছাড়াও iframe এর ভেতরে রিকোয়েস্ট যায়, তাই আইফ্রেম চেক করা
+                    frames = page.frames
+                    for frame in frames:
+                        if "backend.plusbox.tv" in frame.url:
+                            log_status("debug", f"[{title}] আইফ্রেম ফেম পাওয়া গেছে: {frame.url}")
+
+                except Exception as click_err:
+                    log_status("warning", f"[{title}] ক্লিক করার সময় সমস্যা: {str(click_err)}")
+
+                # লিসেনার রিমুভ করা যাতে আগের চ্যানেলের ডাটা পরেরটিতে না যায়
                 page.remove_listener("request", handle_request)
 
-                if captured_m3u8:
-                    # তালিকার প্রথম কার্যকর .m3u8 লিংকটি নেওয়া
-                    stream_url = captured_m3u8[0]
-                    log_status("success", f"[{title}] ডাইনামিক টোকেনযুক্ত m3u8 লিংক পাওয়া গেছে!")
+                stream_url = ""
+                if captured_streams:
+                    # অগ্রাধিকার দেওয়া হবে .m3u8 লিংকটিকে, না পেলে preview.mp4 নেওয়া হবে
+                    m3u8_list = [s for s in captured_streams if "m3u8" in s]
+                    if m3u8_list:
+                        stream_url = m3u8_list[0]
+                    else:
+                        stream_url = captured_streams[0]
+                    
+                    log_status("success", f"[{title}] সফলভাবে লিংক পাওয়া গেছে: {stream_url}")
                 else:
-                    stream_url = ""
-                    log_status("warning", f"[{title}] লিংক ক্যাপচার করা সম্ভব হয়নি।")
+                    log_status("warning", f"[{title}] কোনো স্ট্রিম লিংক ক্যাপচার করা যায়নি।")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
@@ -95,17 +110,17 @@ def scrape_channels():
                         "url": stream_url
                     })
 
-            # চূড়ান্ত .m3u প্লেলিস্ট ফাইল তৈরি করা
+            # চূড়ান্ত .m3u প্লেলিস্ট তৈরি করা
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
                     f.write(f'#EXTINF:-1 tvg-logo="{ch["logo"]}" ,{ch["title"]}\n')
                     f.write(f'{ch["url"]}\n')
 
-            log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট কার্যকরী চ্যানেল: {len(extracted_channels)}")
+            log_status("success", f"প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: {len(extracted_channels)}")
 
         except Exception as e:
-            log_status("error", f"ত্রুটি ঘটেছে: {str(e)}")
+            log_status("error", f"বড় ধরনের ত্রুটি ঘটেছে: {str(e)}")
         
         finally:
             browser.close()
