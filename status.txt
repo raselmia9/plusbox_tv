@@ -1,60 +1,60 @@
---- PlusBox TV Direct Source Extraction Log ---
+--- PlusBox TV Real Token Capture Script Log ---
 
-🔵 [INFO] সরাসরি সোর্স কোড ভিত্তিক এক্সট্রাকশন শুরু হয়েছে...
+🔵 [INFO] রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
 🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 54 টি
-🟢 [SUCCESS] [BTVWorld] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [BTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ATNBangla] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ATNNews] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [BijoyTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [AsianTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [BanglaVision] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [Channel24] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ChannelI] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [DBCNews] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [Channel9] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [DeeptoTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [DeshTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [EkattorTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [EkusheyTv] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [TSportsHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [IndependentTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [GaziTVHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [JamunaTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [Maasranga] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [MyTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarNews] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [News24] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [NTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [RTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SomoyTv] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [EkhonTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ColorsBangla] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [IndiaToday] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [BloombergTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [RussiaToday] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [RedBullTV] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [Aljazeera] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [Enterr10] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [DiscoveryHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [AnimalPlanet] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [PTVSports] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyTVHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyAath] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyMaxHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyTen1HD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyTen2HD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [SonyTen3HD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarSports1HD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarSports2HD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarSportsSelect1] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarSportsSelect2] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [UNITE8Sports1] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [EUROSPORT] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [BTSportsEspn] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarJalshaHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [StarGoldHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ZeeBanglaHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] [ZeeCinemaHD] লিংক সফলভাবে তৈরি হয়েছে।
-🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 54
+🔴 [ERROR] [BTVWorld] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ATNBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ATNNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BijoyTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [AsianTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BanglaVision] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Channel24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ChannelI] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DBCNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Channel9] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DeeptoTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DeshTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [EkattorTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [EkusheyTv] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [TSportsHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [IndependentTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [GaziTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [JamunaTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Maasranga] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [MyTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [News24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [NTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [RTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SomoyTv] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [EkhonTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ColorsBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [IndiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [RussiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [RedBullTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Aljazeera] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Enterr10] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DiscoveryHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [PTVSports] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyMaxHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyTen1HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyTen2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyTen3HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarSports1HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarSports2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarSportsSelect1] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarSportsSelect2] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [UNITE8Sports1] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [EUROSPORT] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BTSportsEspn] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarJalshaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [StarGoldHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ZeeBanglaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ZeeCinemaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 0
