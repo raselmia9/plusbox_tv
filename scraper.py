@@ -1,4 +1,5 @@
 import os
+import time
 from playwright.sync_api import sync_playwright
 
 URL = "https://plusbox.tv/"
@@ -6,7 +7,7 @@ M3U_FILE = "playlist.m3u"
 LOG_FILE = "status.txt"
 
 def log_status(level, message):
-    prefix = {"info": "🔵 [INFO]", "success": "🟢 [SUCCESS]", "error": "🔴 [ERROR]"}.get(level, "⚪ [LOG]")
+    prefix = {"info": "🔵 [INFO]", "success": "🟢 [SUCCESS]", "warning": "🟡 [WARNING]", "error": "🔴 [ERROR]"}.get(level, "⚪ [LOG]")
     log_msg = f"{prefix} {message}"
     print(log_msg)
     with open(LOG_FILE, "a", encoding="utf-8") as f:
@@ -14,9 +15,9 @@ def log_status(level, message):
 
 def scrape_channels():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        f.write("--- PlusBox TV Direct Source Extraction Log ---\n\n")
+        f.write("--- PlusBox TV Real Token Capture Script Log ---\n\n")
 
-    log_status("info", "সরাসরি সোর্স কোড ভিত্তিক এক্সট্রাকশন শুরু হয়েছে...")
+    log_status("info", "রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...")
 
     extracted_channels = []
 
@@ -34,8 +35,8 @@ def scrape_channels():
             log_status("info", f"ওয়েবসাইট ভিজিট করা হচ্ছে: {URL}")
             page.goto(URL, timeout=60000)
             page.wait_for_load_state("networkidle")
+            time.sleep(3)
 
-            # সোর্স কোডের সেই কাঙ্ক্ষিত থাম্বনেইল এলিমেন্টগুলো সরাসরি সিলেক্ট করা
             channel_links = page.query_selector_all("a.playignitor.thumbnail")
             total_channels = len(channel_links)
             log_status("info", f"মোট চ্যানেল পাওয়া গেছে: {total_channels} টি")
@@ -46,13 +47,9 @@ def scrape_channels():
 
             for index, link in enumerate(channel_links):
                 data_name = link.get_attribute("data-name")
-                data_source = link.get_attribute("data-source")
                 href = link.get_attribute("href")
-                
-                # চ্যানেলের নাম নির্ধারণ
                 title = data_name if data_name else (href.replace("#", "").strip() if href else f"Channel {index+1}")
 
-                # লোগো সংগ্রহ করা
                 img = link.query_selector("img")
                 logo_url = ""
                 if img:
@@ -60,11 +57,38 @@ def scrape_channels():
                     if src:
                         logo_url = "https://plusbox.tv" + src if src.startswith("/") else src
 
+                captured_token_urls = []
+
+                # নেটওয়ার্ক ইন্টারসেপ্টর: শুধুমাত্র রিয়েল ও ভ্যালিড টোকেনযুক্ত m3u8 লিংক ধরবে
+                def handle_request(request):
+                    req_url = request.url
+                    if "index.fmp4.m3u8" in req_url and "token=" in req_url:
+                        # নিশ্চিত করা হচ্ছে যেন টোকেনটি খালি বা ব্রোকেন না হয় (লিংকের সাইজ বড় হবে)
+                        if len(req_url) > 100 and not req_url.endswith("token="):
+                            if req_url not in captured_token_urls:
+                                captured_token_urls.append(req_url)
+
+                page.on("request", handle_request)
+
+                try:
+                    # চ্যানেলে ক্লিক করে ব্যাকএন্ড থেকে টোকেন জেনারেট করার সুযোগ করে দেওয়া
+                    link.scroll_into_view_if_needed()
+                    link.click()
+                    
+                    # ব্যাকএন্ড রেসপন্স এবং টোকেন আসার জন্য পর্যাপ্ত ৪ সেকেন্ড অপেক্ষা
+                    time.sleep(4.0)
+                except Exception as e:
+                    log_status("warning", f"[{title}] ক্লিকে সমস্যা: {str(e)}")
+
+                page.remove_listener("request", handle_request)
+
                 stream_url = ""
-                if data_source:
-                    # সোর্স কোডের লজিক অনুযায়ী embed.html কে সরাসরি index.fmp4.m3u8 এ রূপান্তর করা
-                    # যেমন: .../embed.html?mute=false... -> .../index.fmp4.m3u8?mute=false...
-                    stream_url = data_source.replace("embed.html", "index.fmp4.m3u8")
+                if captured_token_urls:
+                    # একদম শেষের লেটেস্ট ও ফ্রেশ টোকেনযুক্ত লিংকটি নেওয়া
+                    stream_url = captured_token_urls[-1]
+                    log_status("success", f"[{title}] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!")
+                else:
+                    log_status("error", f"[{title}] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!")
 
                 if stream_url and logo_url:
                     extracted_channels.append({
@@ -72,9 +96,8 @@ def scrape_channels():
                         "logo": logo_url,
                         "url": stream_url
                     })
-                    log_status("success", f"[{title}] লিংক সফলভাবে তৈরি হয়েছে।")
 
-            # .m3u প্লেলিস্ট ফাইল তৈরি
+            # প্লেলিস্ট ফাইল তৈরি
             with open(M3U_FILE, "w", encoding="utf-8") as f:
                 f.write("#EXTM3U\n")
                 for ch in extracted_channels:
