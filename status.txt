@@ -2,40 +2,58 @@
 
 🔵 [INFO] রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
-🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 47 টি
-🔴 [ERROR] [BTVWorld] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 49 টি
 🔴 [ERROR] [BTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BTVWorld] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Channel24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ChannelI] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🟡 [WARNING] [ChannelOne] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+🟢 [SUCCESS] [ChannelOne] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
 🔴 [ERROR] [DBCNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DeeptoTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DeshTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [EkattorTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [EkusheyTv] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TSportsHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [IndependentTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [GaziTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [IndependentTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [JamunaTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Maasranga] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [News24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [News24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [NTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SomoyTv] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [EkhonTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ColorsBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [IndiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Aljazeera] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [RedBullTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [RussiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [Aljazeera] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Enterr10] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BBCEarthHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DiscoveryHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [PTVSports] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyMaxHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen1HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -44,10 +62,10 @@
 🔴 [ERROR] [StarSports2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarSportsSelect1] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarSportsSelect2] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [EUROSPORT] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BTSportsEspn] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [EUROSPORT] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarJalshaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarGoldHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeBanglaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeCinemaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 0
+🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 1

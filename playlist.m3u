@@ -1,1 +1,3 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="img/channels/channelone.png" ,ChannelOne
+https://backend.plusbox.tv/ChannelI/tracks-a1/index.fmp4.m3u8?token=2c84c61e4b57d766810471152676776ee0aeba5a-25df3911f5e0da1a869067e12c1f7ca9-1790408297-1790397497
