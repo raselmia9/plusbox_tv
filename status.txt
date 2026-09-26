@@ -2,12 +2,12 @@
 
 🔵 [INFO] রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
-🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 66 টি
+🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 69 টি
 🔴 [ERROR] [BTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BTVWorld] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [ATNIslamic] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ATNIslamic] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BanglaTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Channel24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ChannelI] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -38,16 +38,18 @@ Call log:
 🔴 [ERROR] [IndependentTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [JamunaTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Maasranga] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [News24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [StarNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [News24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [NTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [MovieBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SomoyTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [GlobalTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [EkhonTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [GlobalTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TenCricket] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Aajtak] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [IndiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [CartoonNetwork] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Pogo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [RedBullTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [RussiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -55,9 +57,6 @@ Call log:
 🔴 [ERROR] [Zing] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Enterr10] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BBCEarthHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DiscoveryKids] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DiscoveryHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DiscoveryTurbo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🟡 [WARNING] [InvDiscoveryHD] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
 Call log:
   - attempting click action
@@ -75,15 +74,19 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [InvDiscoveryHD] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
+🔴 [ERROR] [DiscoveryHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DiscoveryTurbo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DiscoveryKids] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DiscoveryScience] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TLCHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [PTVSports] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyMAX2] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyYAY] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyMaxHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyYAY] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyMAX2] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyPixHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen1HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen3HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
