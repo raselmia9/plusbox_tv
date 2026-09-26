@@ -2,16 +2,15 @@
 
 🔵 [INFO] রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
-🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 69 টি
+🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 74 টি
 🔴 [ERROR] [BTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BTVWorld] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ATNIslamic] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNBangla] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ATNNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [ATNIslamic] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BanglaTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Channel24] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ChannelI] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DBCNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🟡 [WARNING] [ChannelOne] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
 Call log:
   - attempting click action
@@ -29,6 +28,7 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [ChannelOne] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
+🔴 [ERROR] [DBCNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DeeptoTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DeshTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [EkattorTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -46,16 +46,37 @@ Call log:
 🔴 [ERROR] [EkhonTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [GlobalTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TenCricket] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [Aajtak] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [IndiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [CartoonNetwork] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Aajtak] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [WION] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Pogo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [RedBullTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [CartoonNetwork] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DW] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [RussiaToday] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SkyNews] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [RedBullTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🟡 [WARNING] [GBNews] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+🟢 [SUCCESS] [GBNews] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
+🔴 [ERROR] [CNN] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [BloombergTV] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Aljazeera] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [Zing] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [Enterr10] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [Zing] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [BBCEarthHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🟡 [WARNING] [InvDiscoveryHD] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
 Call log:
@@ -74,18 +95,18 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [InvDiscoveryHD] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
+🔴 [ERROR] [DiscoveryScience] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [DiscoveryKids] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DiscoveryHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [DiscoveryTurbo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DiscoveryKids] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [DiscoveryScience] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TLCHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [PTVSports] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyAath] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyMaxHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [SonyYAY] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyMAX2] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyYAY] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [SonyMaxHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyPixHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen1HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [SonyTen2HD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -98,8 +119,8 @@ Call log:
 🔴 [ERROR] [AndPicturesHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeTVHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeBanglaHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
-🔴 [ERROR] [ZeeBanglaCinema] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeBollywood] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🔴 [ERROR] [ZeeBanglaCinema] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [ZeeAction] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🟡 [WARNING] [ZeeCafe] ক্লিকে সমস্যা: ElementHandle.click: Timeout 30000ms exceeded.
 Call log:
@@ -136,4 +157,4 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [ZeeAnmol] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
-🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 4
+🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 5
