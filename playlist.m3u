@@ -1,11 +1,11 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="img/channels/channelone.png" ,ChannelOne
-https://backend.plusbox.tv/ChannelI/tracks-a1/index.fmp4.m3u8?token=c3d3192465ae91d7d1c840267bb146c6321b26a8-1817939cb2393d32f048f73fe7e8be83-1790466892-1790456092
+https://backend.plusbox.tv/ChannelI/tracks-a1/index.fmp4.m3u8?token=127f47fbd8a09e65a437187d9f4cfe808c6a4a58-112cb32fff0a4e19b88e8a98a678a7c6-1790495987-1790485187
 #EXTINF:-1 tvg-logo="img/channels/gbnews.png" ,GBNews
-https://backend.plusbox.tv/RedBullTV/tracks-a1/index.fmp4.m3u8?token=95af05c2f3a96e6115ef2c5cc39980223599dc9f-995998b013c771baf3a7968512afa674-1790467032-1790456232
+https://backend.plusbox.tv/RedBullTV/tracks-a1/index.fmp4.m3u8?token=8569a684d5cc7df8d0b4b71d37af14a34e875157-ed094d0369642ad460f8c71ac87a1c51-1790496128-1790485328
 #EXTINF:-1 tvg-logo="img/channels/invdiscoveryhd.png" ,InvDiscoveryHD
-https://backend.plusbox.tv/BBCEarthHD/tracks-a1/index.fmp4.m3u8?token=5eb7a316427cf0fc564fb88116bb8d77d1c3fca0-741105d5c2e99bd7d653eccb99e462d0-1790467087-1790456287
+https://backend.plusbox.tv/BBCEarthHD/tracks-a1/index.fmp4.m3u8?token=4a81637718f7fbcdc7688048c813a5a2a29efe7e-ad1138f09ea431f17d72e1aa016bac3b-1790496183-1790485383
 #EXTINF:-1 tvg-logo="img/channels/zeecafe.png" ,ZeeCafe
-https://backend.plusbox.tv/ZeeAction/tracks-a1/index.fmp4.m3u8?token=e1ffa8c852c494cee6ec9af9c4f8b269248831c0-712f3c7371b59f008de767b41e732f6c-1790467228-1790456428
+https://backend.plusbox.tv/ZeeAction/tracks-a1/index.fmp4.m3u8?token=a76b025680c41cca1021feaf47b8cb1610c39e7e-b0d4ec54d77b64a734664706fb510c27-1790496323-1790485523
 #EXTINF:-1 tvg-logo="img/channels/zeeanmol.png" ,ZeeAnmol
-https://backend.plusbox.tv/ZeeCinemaHD/tracks-a1/index.fmp4.m3u8?token=1bb819e3033874fcc9ca04ea08c8ad3da4cc3ef3-7741f0c688f77a8cfb40ae08429accda-1790467262-1790456462
+https://backend.plusbox.tv/ZeeCinemaHD/tracks-a1/index.fmp4.m3u8?token=e438c328d608ed82f5435de772d64952630e4b46-f986714ce801d15f05c2a6d8bb95f6a4-1790496357-1790485557
