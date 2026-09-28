@@ -1,11 +1,13 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="img/channels/channelone.png" ,ChannelOne
-https://backend.plusbox.tv/ChannelI/tracks-a1/index.fmp4.m3u8?token=763a358482215a1f02843877d22287fe52269533-29cc6cdaac5565ea8697fbf2b36d4729-1790582490-1790571690
+https://backend.plusbox.tv/ChannelI/tracks-a1/index.fmp4.m3u8?token=db73689e9bc0bc7b3a3d5d0511699cd02e07a025-c8b2d1a295c485008ed5b92a1ddc08b3-1790613279-1790602479
 #EXTINF:-1 tvg-logo="img/channels/gbnews.png" ,GBNews
-https://backend.plusbox.tv/SkyNews/tracks-a1/index.fmp4.m3u8?token=4d2e06269c9c4111f2b532c3c6206c4ae65eb1ac-8a0582100e7f0d9116894dee92de6872-1790582630-1790571830
+https://backend.plusbox.tv/SkyNews/tracks-a1/index.fmp4.m3u8?token=7c26956a486e52e3d82d5c7d146bb17ff3d67bb8-25bb22ee28ecc15501ba171dd057c866-1790613419-1790602619
 #EXTINF:-1 tvg-logo="img/channels/invdiscoveryhd.png" ,InvDiscoveryHD
-https://backend.plusbox.tv/DiscoveryHD/tracks-a1/index.fmp4.m3u8?token=f9598d94b82df9e059557a12fe55b5c62d73a4d4-07272862fbe92a82103c5a4ea94a782a-1790582713-1790571913
+https://backend.plusbox.tv/DiscoveryHD/tracks-a1/index.fmp4.m3u8?token=daa0beed2fbe14770097a30570c1aac18a7f6157-b8628c8b9f3810de18faccf2de3cd37b-1790613502-1790602702
+#EXTINF:-1 tvg-logo="img/channels/discoveryturbo.png" ,DiscoveryTurbo
+https://backend.plusbox.tv/DiscoveryHD/tracks-a1/index.fmp4.m3u8?token=daa0beed2fbe14770097a30570c1aac18a7f6157-b8628c8b9f3810de18faccf2de3cd37b-1790613502-1790602702
 #EXTINF:-1 tvg-logo="img/channels/zeecafe.png" ,ZeeCafe
-https://backend.plusbox.tv/ZeeAction/tracks-a1/index.fmp4.m3u8?token=fe32c404e9c0fe73edac02acb84fd6108eca989d-ff5cf6718ca0ef9d64ddbc145ff226ea-1790582846-1790572046
+https://backend.plusbox.tv/ZeeAction/tracks-a1/index.fmp4.m3u8?token=3f7f034366da85f7d13ad1435654721c8a4799d2-efcd480528163de7242541a43cbffc26-1790613634-1790602834
 #EXTINF:-1 tvg-logo="img/channels/zeeanmol.png" ,ZeeAnmol
-https://backend.plusbox.tv/ZeeCinemaHD/tracks-a1/index.fmp4.m3u8?token=db27915c36dcc01b99a911536ced52124ca2285b-04bab21cefd27cbfda9b5529242cbfb0-1790582880-1790572080
+https://backend.plusbox.tv/ZeeCinemaHD/tracks-a1/index.fmp4.m3u8?token=9bc3b1d8617c140b891f003b542802d3699dbc8e-71810122db48f0216da2e9fdb3e9f547-1790613668-1790602868

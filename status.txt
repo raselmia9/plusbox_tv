@@ -102,7 +102,7 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [InvDiscoveryHD] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
-🔴 [ERROR] [DiscoveryTurbo] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
+🟢 [SUCCESS] [DiscoveryTurbo] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
 🔴 [ERROR] [DiscoveryScience] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [AnimalPlanet] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
 🔴 [ERROR] [TLCHD] টোকেনযুক্ত লিংক ক্যাচ করা যায়নি!
@@ -162,4 +162,4 @@ Call log:
        - waiting 500ms
 
 🟢 [SUCCESS] [ZeeAnmol] রিয়েল টোকেনসহ সঠিক .m3u8 লিংক পাওয়া গেছে!
-🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 5
+🟢 [SUCCESS] প্লেলিস্ট সফলভাবে তৈরি হয়েছে! মোট চ্যানেল: 6
