@@ -1,13 +1,1 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="img/channels/channels.png" ,ChannelS
-https://backend.plusbox.tv/BanglaTV/tracks-a1/index.fmp4.m3u8?token=2c1021a3f22271f908b5b7c7d856e5bdfa4bd494-9b02d7b423d5745f23ba8bc3c40ee3f6-1790756010-1790745210
-#EXTINF:-1 tvg-logo="img/channels/channelone.png" ,ChannelOne
-https://backend.plusbox.tv/DBCNews/tracks-a1/index.fmp4.m3u8?token=f5f6ff82e2c40dfd091ae578e5f5c88b196574eb-72558629e3cc0385c34a6c7b1eca858a-1790756052-1790745252
-#EXTINF:-1 tvg-logo="img/channels/gbnews.png" ,GBNews
-https://backend.plusbox.tv/Aljazeera/tracks-a1/index.fmp4.m3u8?token=c1b5fd5871034445c3eae5a05cf8a68b73159dca-7ec6a4113ec97f9cf2e04275276732f7-1790756189-1790745389
-#EXTINF:-1 tvg-logo="img/channels/invdiscoveryhd.png" ,InvDiscoveryHD
-https://backend.plusbox.tv/BBCEarthHD/tracks-a1/index.fmp4.m3u8?token=078e5f0094b649053773b776a65897a8af5fc4f0-884629a9aa752b22a5019c9eb42dd629-1790756264-1790745464
-#EXTINF:-1 tvg-logo="img/channels/zeecafe.png" ,ZeeCafe
-https://backend.plusbox.tv/ZeeAction/tracks-a1/index.fmp4.m3u8?token=45a18f59ef81580a578ff8831798ed933109c9aa-9f9f2cb48da811d15e7ac507c7ab744d-1790756404-1790745604
-#EXTINF:-1 tvg-logo="img/channels/zeeanmol.png" ,ZeeAnmol
-https://backend.plusbox.tv/ZeeCinemaHD/tracks-a1/index.fmp4.m3u8?token=82de4be1e3032d693388744a092510e7c9376660-5f6646091d83b98b85fa5b54ae124a8d-1790756438-1790745638
