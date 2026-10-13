@@ -2,7 +2,5 @@
 
 🔵 [INFO] রিয়েল টোকেন ক্যাপচার স্ক্রিপ্ট শুরু হয়েছে...
 🔵 [INFO] ওয়েবসাইট ভিজিট করা হচ্ছে: https://plusbox.tv/
-🔴 [ERROR] বড় ধরনের ত্রুটি ঘটেছে: Page.goto: Timeout 60000ms exceeded.
-Call log:
-  - navigating to "https://plusbox.tv/", waiting until "load"
-
+🔵 [INFO] মোট চ্যানেল পাওয়া গেছে: 0 টি
+🔴 [ERROR] কোনো চ্যানেল এলিমেন্ট পাওয়া যায়নি!
